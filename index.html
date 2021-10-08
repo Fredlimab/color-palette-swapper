@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Palette Swapper</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header" id="header">
+            <h3 id="head-text">HEADER</h3>
+        </div>
+
+        <div class="sidebar" id="sidebar">
+            <h3 id="side-text">SIDEBAR</h3>
+        </div>
+
+        <div class="main" id="main">
+            <h1 id="main-text">MAIN</h1>
+            <p> Click on the button below to randomly change the colour palette for this page.</p>
+            <button class="button" id="button">Switch</button>
+            <button class="button" id="reset">Reset</button>
+        </div>
+
+        <div class="footer" id="footer">
+            <h3 id="foot-text">FOOTER</h3>
+        </div>
+    </div>
+
+    <div id="teste" class="feed-global">
+        <div class="item" id="a0">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(68, 73, 65);"><span onclick="copy(this)">#444941</span></div>
+        <div class="place c2" style="background-color: rgb(95, 122, 97);"><span onclick="copy(this)">#5F7A61</span></div>
+        <div class="place c1" style="background-color: rgb(213, 238, 187);"><span onclick="copy(this)">#D5EEBB</span></div>
+        <div class="place c0" style="background-color: rgb(127, 200, 169);"><span onclick="copy(this)">#7FC8A9</span></div>
+        </div>
+        </div>
+        <div class="item" id="a1">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(194, 247, 132);"><span onclick="copy(this)">#C2F784</span></div>
+        <div class="place c2" style="background-color: rgb(255, 244, 125);"><span onclick="copy(this)">#FFF47D</span></div>
+        <div class="place c1" style="background-color: rgb(255, 191, 134);"><span onclick="copy(this)">#FFBF86</span></div>
+        <div class="place c0" style="background-color: rgb(246, 169, 169);"><span onclick="copy(this)">#F6A9A9</span></div>
+        </div>
+        </div>
+        <div class="item" id="a2">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(110, 133, 178);"><span onclick="copy(this)">#6E85B2</span></div>
+        <div class="place c2" style="background-color: rgb(92, 82, 127);"><span onclick="copy(this)">#5C527F</span></div>
+        <div class="place c1" style="background-color: rgb(62, 44, 65);"><span onclick="copy(this)">#3E2C41</span></div>
+        <div class="place c0" style="background-color: rgb(38, 28, 44);"><span onclick="copy(this)">#261C2C</span></div>
+        </div>
+        </div>
+        <div class="item" id="a3">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(111, 76, 91);"><span onclick="copy(this)">#6F4C5B</span></div>
+        <div class="place c2" style="background-color: rgb(158, 119, 119);"><span onclick="copy(this)">#9E7777</span></div>
+        <div class="place c1" style="background-color: rgb(222, 186, 157);"><span onclick="copy(this)">#DEBA9D</span></div>
+        <div class="place c0" style="background-color: rgb(245, 232, 199);"><span onclick="copy(this)">#F5E8C7</span></div>
+        </div>
+        </div>
+        <div class="item" id="a4">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(241, 233, 229);"><span onclick="copy(this)">#F1E9E5</span></div>
+        <div class="place c2" style="background-color: rgb(180, 184, 151);"><span onclick="copy(this)">#B4B897</span></div>
+        <div class="place c1" style="background-color: rgb(54, 139, 133);"><span onclick="copy(this)">#368B85</span></div>
+        <div class="place c0" style="background-color: rgb(70, 70, 96);"><span onclick="copy(this)">#464660</span></div>
+        </div>
+        </div>
+        <div class="item" id="a5">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(224, 192, 151);"><span onclick="copy(this)">#E0C097</span></div>
+        <div class="place c2" style="background-color: rgb(184, 92, 56);"><span onclick="copy(this)">#B85C38</span></div>
+        <div class="place c1" style="background-color: rgb(92, 61, 46);"><span onclick="copy(this)">#5C3D2E</span></div>
+        <div class="place c0" style="background-color: rgb(45, 36, 36);"><span onclick="copy(this)">#2D2424</span></div>
+        </div>
+        </div>
+        <div class="item" id="a6">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(0, 0, 0);"><span onclick="copy(this)">#000000</span></div>
+        <div class="place c2" style="background-color: rgb(189, 22, 22);"><span onclick="copy(this)">#BD1616</span></div>
+        <div class="place c1" style="background-color: rgb(255, 38, 38);"><span onclick="copy(this)">#FF2626</span></div>
+        <div class="place c0" style="background-color: rgb(255, 230, 230);"><span onclick="copy(this)">#FFE6E6</span></div>
+        </div>
+        </div>
+        <div class="item" id="a7">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(255, 218, 185);"><span onclick="copy(this)">#FFDAB9</span></div>
+        <div class="place c2" style="background-color: rgb(250, 128, 114);"><span onclick="copy(this)">#FA8072</span></div>
+        <div class="place c1" style="background-color: rgb(15, 82, 186);"><span onclick="copy(this)">#0F52BA</span></div>
+        <div class="place c0" style="background-color: rgb(0, 35, 102);"><span onclick="copy(this)">#002366</span></div>
+        </div>
+        </div>
+        <div class="item" id="a8">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(254, 255, 226);"><span onclick="copy(this)">#FEFFE2</span></div>
+        <div class="place c2" style="background-color: rgb(240, 240, 203);"><span onclick="copy(this)">#F0F0CB</span></div>
+        <div class="place c1" style="background-color: rgb(218, 213, 171);"><span onclick="copy(this)">#DAD5AB</span></div>
+        <div class="place c0" style="background-color: rgb(195, 186, 133);"><span onclick="copy(this)">#C3BA85</span></div>
+        </div>
+        </div>
+        <div class="item" id="a9">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(239, 227, 208);"><span onclick="copy(this)">#EFE3D0</span></div>
+        <div class="place c2" style="background-color: rgb(217, 202, 179);"><span onclick="copy(this)">#D9CAB3</span></div>
+        <div class="place c1" style="background-color: rgb(135, 168, 164);"><span onclick="copy(this)">#87A8A4</span></div>
+        <div class="place c0" style="background-color: rgb(152, 109, 142);"><span onclick="copy(this)">#986D8E</span></div>
+        </div>
+        </div>
+        <div class="item" id="a10">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(157, 218, 198);"><span onclick="copy(this)">#9DDAC6</span></div>
+        <div class="place c2" style="background-color: rgb(194, 255, 217);"><span onclick="copy(this)">#C2FFD9</span></div>
+        <div class="place c1" style="background-color: rgb(255, 211, 113);"><span onclick="copy(this)">#FFD371</span></div>
+        <div class="place c0" style="background-color: rgb(255, 72, 72);"><span onclick="copy(this)">#FF4848</span></div>
+        </div>
+        </div>
+        <div class="item" id="a11">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(223, 113, 27);"><span onclick="copy(this)">#DF711B</span></div>
+        <div class="place c2" style="background-color: rgb(255, 183, 64);"><span onclick="copy(this)">#FFB740</span></div>
+        <div class="place c1" style="background-color: rgb(253, 228, 156);"><span onclick="copy(this)">#FDE49C</span></div>
+        <div class="place c0" style="background-color: rgb(100, 201, 207);"><span onclick="copy(this)">#64C9CF</span></div>
+        </div>
+        </div>
+        <div class="item" id="a12">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(255, 76, 41);"><span onclick="copy(this)">#FF4C29</span></div>
+        <div class="place c2" style="background-color: rgb(51, 71, 86);"><span onclick="copy(this)">#334756</span></div>
+        <div class="place c1" style="background-color: rgb(44, 57, 75);"><span onclick="copy(this)">#2C394B</span></div>
+        <div class="place c0" style="background-color: rgb(8, 32, 50);"><span onclick="copy(this)">#082032</span></div>
+        </div>
+        </div>
+        <div class="item" id="a13">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(205, 187, 167);"><span onclick="copy(this)">#CDBBA7</span></div>
+        <div class="place c2" style="background-color: rgb(218, 208, 194);"><span onclick="copy(this)">#DAD0C2</span></div>
+        <div class="place c1" style="background-color: rgb(244, 223, 208);"><span onclick="copy(this)">#F4DFD0</span></div>
+        <div class="place c0" style="background-color: rgb(253, 239, 239);"><span onclick="copy(this)">#FDEFEF</span></div>
+        </div>
+        </div>
+        <div class="item" id="a14">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(238, 238, 238);"><span onclick="copy(this)">#EEEEEE</span></div>
+        <div class="place c2" style="background-color: rgb(239, 183, 183);"><span onclick="copy(this)">#EFB7B7</span></div>
+        <div class="place c1" style="background-color: rgb(189, 75, 75);"><span onclick="copy(this)">#BD4B4B</span></div>
+        <div class="place c0" style="background-color: rgb(0, 0, 0);"><span onclick="copy(this)">#000000</span></div>
+        </div>
+        </div>
+        <div class="item" id="a15">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(0, 193, 212);"><span onclick="copy(this)">#00C1D4</span></div>
+        <div class="place c2" style="background-color: rgb(238, 238, 238);"><span onclick="copy(this)">#EEEEEE</span></div>
+        <div class="place c1" style="background-color: rgb(248, 72, 94);"><span onclick="copy(this)">#F8485E</span></div>
+        <div class="place c0" style="background-color: rgb(81, 45, 109);"><span onclick="copy(this)">#512D6D</span></div>
+        </div>
+        </div>
+        <div class="item" id="a16">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(247, 230, 173);"><span onclick="copy(this)">#F7E6AD</span></div>
+        <div class="place c2" style="background-color: rgb(245, 253, 176);"><span onclick="copy(this)">#F5FDB0</span></div>
+        <div class="place c1" style="background-color: rgb(188, 255, 185);"><span onclick="copy(this)">#BCFFB9</span></div>
+        <div class="place c0" style="background-color: rgb(40, 255, 191);"><span onclick="copy(this)">#28FFBF</span></div>
+        </div>
+        </div>
+        <div class="item" id="a17">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(255, 170, 76);"><span onclick="copy(this)">#FFAA4C</span></div>
+        <div class="place c2" style="background-color: rgb(80, 137, 198);"><span onclick="copy(this)">#5089C6</span></div>
+        <div class="place c1" style="background-color: rgb(3, 83, 151);"><span onclick="copy(this)">#035397</span></div>
+        <div class="place c0" style="background-color: rgb(0, 30, 108);"><span onclick="copy(this)">#001E6C</span></div>
+        </div>
+        </div>
+       <div class="item" id="a18">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(242, 225, 193);"><span onclick="copy(this)">#F2E1C1</span></div>
+        <div class="place c2" style="background-color: rgb(246, 174, 153);"><span onclick="copy(this)">#F6AE99</span></div>
+        <div class="place c1" style="background-color: rgb(185, 122, 149);"><span onclick="copy(this)">#B97A95</span></div>
+        <div class="place c0" style="background-color: rgb(113, 111, 129);"><span onclick="copy(this)">#716F81</span></div>
+        </div>
+        </div>
+        <div class="item" id="a19">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(196, 0, 255);"><span onclick="copy(this)">#C400FF</span></div>
+        <div class="place c2" style="background-color: rgb(255, 103, 231);"><span onclick="copy(this)">#FF67E7</span></div>
+        <div class="place c1" style="background-color: rgb(255, 243, 56);"><span onclick="copy(this)">#FFF338</span></div>
+        <div class="place c0" style="background-color: rgb(12, 236, 221);"><span onclick="copy(this)">#0CECDD</span></div>
+        </div>
+        </div>
+        <div class="item" id="a20">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(243, 242, 201);"><span onclick="copy(this)">#F3F2C9</span></div>
+        <div class="place c2" style="background-color: rgb(83, 184, 187);"><span onclick="copy(this)">#53B8BB</span></div>
+        <div class="place c1" style="background-color: rgb(5, 80, 82);"><span onclick="copy(this)">#055052</span></div>
+        <div class="place c0" style="background-color: rgb(0, 54, 56);"><span onclick="copy(this)">#003638</span></div>
+        </div>
+        </div>
+        <div class="item" id="a21">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(255, 235, 201);"><span onclick="copy(this)">#FFEBC9</span></div>
+        <div class="place c2" style="background-color: rgb(215, 151, 113);"><span onclick="copy(this)">#D79771</span></div>
+        <div class="place c1" style="background-color: rgb(176, 91, 59);"><span onclick="copy(this)">#B05B3B</span></div>
+        <div class="place c0" style="background-color: rgb(117, 52, 34);"><span onclick="copy(this)">#753422</span></div>
+        </div>
+        </div>
+        <div class="item" id="a22">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(229, 251, 184);"><span onclick="copy(this)">#E5FBB8</span></div>
+        <div class="place c2" style="background-color: rgb(245, 231, 157);"><span onclick="copy(this)">#F5E79D</span></div>
+        <div class="place c1" style="background-color: rgb(254, 152, 152);"><span onclick="copy(this)">#FE9898</span></div>
+        <div class="place c0" style="background-color: rgb(185, 128, 240);"><span onclick="copy(this)">#B980F0</span></div>
+        </div>
+        </div>
+        <div class="item" id="a23">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(238, 238, 238);"><span onclick="copy(this)">#EEEEEE</span></div>
+        <div class="place c2" style="background-color: rgb(142, 38, 87);"><span onclick="copy(this)">#8E2657</span></div>
+        <div class="place c1" style="background-color: rgb(255, 63, 0);"><span onclick="copy(this)">#FF3F00</span></div>
+        <div class="place c0" style="background-color: rgb(250, 255, 0);"><span onclick="copy(this)">#FAFF00</span></div>
+        </div>
+        </div>
+        <div class="item" id="a24">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(255, 227, 227);"><span onclick="copy(this)">#FFE3E3</span></div>
+        <div class="place c2" style="background-color: rgb(255, 160, 160);"><span onclick="copy(this)">#FFA0A0</span></div>
+        <div class="place c1" style="background-color: rgb(38, 42, 83);"><span onclick="copy(this)">#262A53</span></div>
+        <div class="place c0" style="background-color: rgb(98, 131, 149);"><span onclick="copy(this)">#628395</span></div>
+        </div>
+        </div>
+        <div class="item" id="a25">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(167, 52, 137);"><span onclick="copy(this)">#A73489</span></div>
+        <div class="place c2" style="background-color: rgb(255, 61, 104);"><span onclick="copy(this)">#FF3D68</span></div>
+        <div class="place c1" style="background-color: rgb(255, 103, 103);"><span onclick="copy(this)">#FF6767</span></div>
+        <div class="place c0" style="background-color: rgb(250, 173, 128);"><span onclick="copy(this)">#FAAD80</span></div>
+        </div>
+        </div>
+        <div class="item" id="a26">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(238, 238, 238);"><span onclick="copy(this)">#EEEEEE</span></div>
+        <div class="place c2" style="background-color: rgb(120, 122, 145);"><span onclick="copy(this)">#787A91</span></div>
+        <div class="place c1" style="background-color: rgb(20, 30, 97);"><span onclick="copy(this)">#141E61</span></div>
+        <div class="place c0" style="background-color: rgb(15, 4, 76);"><span onclick="copy(this)">#0F044C</span></div>
+        </div>
+        </div>
+        <div class="item" id="a27">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(245, 198, 170);"><span onclick="copy(this)">#F5C6AA</span></div>
+        <div class="place c2" style="background-color: rgb(248, 226, 207);"><span onclick="copy(this)">#F8E2CF</span></div>
+        <div class="place c1" style="background-color: rgb(253, 246, 240);"><span onclick="copy(this)">#FDF6F0</span></div>
+        <div class="place c0" style="background-color: rgb(252, 216, 212);"><span onclick="copy(this)">#FCD8D4</span></div>
+        </div>
+        </div>
+        <div class="item" id="a28">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(172, 255, 173);"><span onclick="copy(this)">#ACFFAD</span></div>
+        <div class="place c2" style="background-color: rgb(113, 239, 163);"><span onclick="copy(this)">#71EFA3</span></div>
+        <div class="place c1" style="background-color: rgb(80, 203, 147);"><span onclick="copy(this)">#50CB93</span></div>
+        <div class="place c0" style="background-color: rgb(84, 67, 107);"><span onclick="copy(this)">#54436B</span></div>
+        </div>
+        </div>
+        <div class="item" id="a29">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(147, 217, 163);"><span onclick="copy(this)">#93D9A3</span></div>
+        <div class="place c2" style="background-color: rgb(205, 243, 162);"><span onclick="copy(this)">#CDF3A2</span></div>
+        <div class="place c1" style="background-color: rgb(237, 142, 124);"><span onclick="copy(this)">#ED8E7C</span></div>
+        <div class="place c0" style="background-color: rgb(160, 60, 120);"><span onclick="copy(this)">#A03C78</span></div>
+        </div>
+        </div>
+        <div class="item" id="a30">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(81, 94, 99);"><span onclick="copy(this)">#515E63</span></div>
+        <div class="place c2" style="background-color: rgb(87, 131, 123);"><span onclick="copy(this)">#57837B</span></div>
+        <div class="place c1" style="background-color: rgb(201, 216, 182);"><span onclick="copy(this)">#C9D8B6</span></div>
+        <div class="place c0" style="background-color: rgb(241, 236, 195);"><span onclick="copy(this)">#F1ECC3</span></div>
+        </div>
+        </div>
+        <div class="item" id="a31">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(255, 213, 35);"><span onclick="copy(this)">#FFD523</span></div>
+        <div class="place c2" style="background-color: rgb(178, 177, 185);"><span onclick="copy(this)">#B2B1B9</span></div>
+        <div class="place c1" style="background-color: rgb(89, 82, 96);"><span onclick="copy(this)">#595260</span></div>
+        <div class="place c0" style="background-color: rgb(44, 46, 67);"><span onclick="copy(this)">#2C2E43</span></div>
+        </div>
+        </div>
+        <div class="item" id="a32">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(136, 255, 247);"><span onclick="copy(this)">#88FFF7</span></div>
+        <div class="place c2" style="background-color: rgb(125, 237, 255);"><span onclick="copy(this)">#7DEDFF</span></div>
+        <div class="place c1" style="background-color: rgb(150, 186, 255);"><span onclick="copy(this)">#96BAFF</span></div>
+        <div class="place c0" style="background-color: rgb(124, 131, 253);"><span onclick="copy(this)">#7C83FD</span></div>
+        </div>
+        </div>
+        <div class="item" id="a33">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(141, 40, 40);"><span onclick="copy(this)">#8D2828</span></div>
+        <div class="place c2" style="background-color: rgb(213, 76, 76);"><span onclick="copy(this)">#D54C4C</span></div>
+        <div class="place c1" style="background-color: rgb(236, 239, 164);"><span onclick="copy(this)">#ECEFA4</span></div>
+        <div class="place c0" style="background-color: rgb(217, 221, 107);"><span onclick="copy(this)">#D9DD6B</span></div>
+        </div>
+        </div>
+        <div class="item" id="a34">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(238, 238, 238);"><span onclick="copy(this)">#EEEEEE</span></div>
+        <div class="place c2" style="background-color: rgb(84, 140, 168);"><span onclick="copy(this)">#548CA8</span></div>
+        <div class="place c1" style="background-color: rgb(71, 96, 114);"><span onclick="copy(this)">#476072</span></div>
+        <div class="place c0" style="background-color: rgb(51, 66, 87);"><span onclick="copy(this)">#334257</span></div>
+        </div>
+        </div>
+        <div class="item" id="a35">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(131, 81, 81);"><span onclick="copy(this)">#835151</span></div>
+        <div class="place c2" style="background-color: rgb(240, 143, 192);"><span onclick="copy(this)">#F08FC0</span></div>
+        <div class="place c1" style="background-color: rgb(255, 188, 188);"><span onclick="copy(this)">#FFBCBC</span></div>
+        <div class="place c0" style="background-color: rgb(255, 234, 202);"><span onclick="copy(this)">#FFEACA</span></div>
+        </div>
+        </div>
+       <div class="item" id="a36">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(43, 43, 43);"></a><span onclick="copy(this)">#2B2B2B</span></div>
+        <div class="place c2" style="background-color: rgb(66, 63, 62);"></a><span onclick="copy(this)">#423F3E</span></div>
+        <div class="place c1" style="background-color: rgb(23, 16, 16);"></a><span onclick="copy(this)">#171010</span></div>
+        <div class="place c0" style="background-color: rgb(54, 34, 34);"></a><span onclick="copy(this)">#362222</span></div>
+        </div>
+        </div>
+        <div class="item" id="a37">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(73, 47, 16);"><span onclick="copy(this)">#492F10</span></div>
+        <div class="place c2" style="background-color: rgb(223, 94, 94);"><span onclick="copy(this)">#DF5E5E</span></div>
+        <div class="place c1" style="background-color: rgb(233, 133, 128);"><span onclick="copy(this)">#E98580</span></div>
+        <div class="place c0" style="background-color: rgb(253, 210, 191);"><span onclick="copy(this)">#FDD2BF</span></div>
+        </div>
+        </div>
+        <div class="item" id="a38">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(62, 33, 93);"><span onclick="copy(this)">#3E215D</span></div>
+        <div class="place c2" style="background-color: rgb(40, 78, 120);"><span onclick="copy(this)">#284E78</span></div>
+        <div class="place c1" style="background-color: rgb(93, 130, 51);"><span onclick="copy(this)">#5D8233</span></div>
+        <div class="place c0" style="background-color: rgb(236, 214, 98);"><span onclick="copy(this)">#ECD662</span></div>
+        </div>
+        </div>
+        <div class="item" id="a39">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(255, 245, 222);"><span onclick="copy(this)">#FFF5DE</span></div>
+        <div class="place c2" style="background-color: rgb(198, 180, 206);"><span onclick="copy(this)">#C6B4CE</span></div>
+        <div class="place c1" style="background-color: rgb(155, 114, 170);"><span onclick="copy(this)">#9B72AA</span></div>
+        <div class="place c0" style="background-color: rgb(60, 81, 134);"><span onclick="copy(this)">#3C5186</span></div>
+        </div>
+        </div>
+        <div class="item" id="a40">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(255, 241, 241);"><span onclick="copy(this)">#FFF1F1</span></div>
+        <div class="place c2" style="background-color: rgb(255, 218, 218);"><span onclick="copy(this)">#FFDADA</span></div>
+        <div class="place c1" style="background-color: rgb(187, 135, 96);"><span onclick="copy(this)">#BB8760</span></div>
+        <div class="place c0" style="background-color: rgb(79, 14, 14);"><span onclick="copy(this)">#4F0E0E</span></div>
+        </div>
+        </div>
+        <div class="item" id="a41">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(161, 152, 130);"><span onclick="copy(this)">#A19882</span></div>
+        <div class="place c2" style="background-color: rgb(194, 184, 163);"><span onclick="copy(this)">#C2B8A3</span></div>
+        <div class="place c1" style="background-color: rgb(230, 221, 198);"><span onclick="copy(this)">#E6DDC6</span></div>
+        <div class="place c0" style="background-color: rgb(254, 247, 220);"><span onclick="copy(this)">#FEF7DC</span></div>
+        </div>
+        </div>
+        <div class="item" id="a42">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(243, 139, 160);"><span onclick="copy(this)">#F38BA0</span></div>
+        <div class="place c2" style="background-color: rgb(255, 188, 188);"><span onclick="copy(this)">#FFBCBC</span></div>
+        <div class="place c1" style="background-color: rgb(237, 246, 229);"><span onclick="copy(this)">#EDF6E5</span></div>
+        <div class="place c0" style="background-color: rgb(181, 234, 234);"><span onclick="copy(this)">#B5EAEA</span></div>
+        </div>
+        </div>
+        <div class="item" id="a43">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(193, 172, 149);"><span onclick="copy(this)">#C1AC95</span></div>
+        <div class="place c2" style="background-color: rgb(181, 205, 163);"><span onclick="copy(this)">#B5CDA3</span></div>
+        <div class="place c1" style="background-color: rgb(201, 228, 197);"><span onclick="copy(this)">#C9E4C5</span></div>
+        <div class="place c0" style="background-color: rgb(250, 235, 224);"><span onclick="copy(this)">#FAEBE0</span></div>
+        </div>
+        </div>
+        <div class="item" id="a44">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(76, 76, 109);"><span onclick="copy(this)">#4C4C6D</span></div>
+        <div class="place c2" style="background-color: rgb(184, 223, 216);"><span onclick="copy(this)">#B8DFD8</span></div>
+        <div class="place c1" style="background-color: rgb(232, 246, 239);"><span onclick="copy(this)">#E8F6EF</span></div>
+        <div class="place c0" style="background-color: rgb(255, 225, 148);"><span onclick="copy(this)">#FFE194</span></div>
+        </div>
+        </div>
+        <div class="item" id="a45">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(251, 199, 247);"><span onclick="copy(this)">#FBC7F7</span></div>
+        <div class="place c2" style="background-color: rgb(251, 122, 252);"><span onclick="copy(this)">#FB7AFC</span></div>
+        <div class="place c1" style="background-color: rgb(214, 42, 208);"><span onclick="copy(this)">#D62AD0</span></div>
+        <div class="place c0" style="background-color: rgb(120, 222, 199);"><span onclick="copy(this)">#78DEC7</span></div>
+        </div>
+        </div>
+        <div class="item" id="a46">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(190, 174, 226);"><span onclick="copy(this)">#BEAEE2</span></div>
+        <div class="place c2" style="background-color: rgb(247, 219, 240);"><span onclick="copy(this)">#F7DBF0</span></div>
+        <div class="place c1" style="background-color: rgb(249, 249, 249);"><span onclick="copy(this)">#F9F9F9</span></div>
+        <div class="place c0" style="background-color: rgb(205, 240, 234);"><span onclick="copy(this)">#CDF0EA</span></div>
+        </div>
+        </div>
+        <div class="item" id="a47">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(255, 169, 0);"><span onclick="copy(this)">#FFA900</span></div>
+        <div class="place c2" style="background-color: rgb(255, 118, 0);"><span onclick="copy(this)">#FF7600</span></div>
+        <div class="place c1" style="background-color: rgb(205, 17, 59);"><span onclick="copy(this)">#CD113B</span></div>
+        <div class="place c0" style="background-color: rgb(82, 0, 106);"><span onclick="copy(this)">#52006A</span></div>
+        </div>
+        </div>
+        <div class="item" id="a48">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(93, 83, 74);"><span onclick="copy(this)">#5D534A</span></div>
+        <div class="place c2" style="background-color: rgb(214, 210, 196);"><span onclick="copy(this)">#D6D2C4</span></div>
+        <div class="place c1" style="background-color: rgb(255, 245, 218);"><span onclick="copy(this)">#FFF5DA</span></div>
+        <div class="place c0" style="background-color: rgb(247, 218, 217);"><span onclick="copy(this)">#F7DAD9</span></div>
+        </div>
+        </div>
+        <div class="item" id="a49">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(239, 239, 239);"><span onclick="copy(this)">#EFEFEF</span></div>
+        <div class="place c2" style="background-color: rgb(255, 201, 71);"><span onclick="copy(this)">#FFC947</span></div>
+        <div class="place c1" style="background-color: rgb(24, 90, 219);"><span onclick="copy(this)">#185ADB</span></div>
+        <div class="place c0" style="background-color: rgb(10, 25, 49);"><span onclick="copy(this)">#0A1931</span></div>
+        </div>
+        </div>
+        <div class="item" id="a50">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(215, 177, 157);"><span onclick="copy(this)">#D7B19D</span></div>
+        <div class="place c2" style="background-color: rgb(198, 139, 89);"><span onclick="copy(this)">#C68B59</span></div>
+        <div class="place c1" style="background-color: rgb(134, 84, 57);"><span onclick="copy(this)">#865439</span></div>
+        <div class="place c0" style="background-color: rgb(64, 34, 24);"><span onclick="copy(this)">#402218</span></div>
+        </div>
+        </div>
+        <div class="item" id="a51">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(232, 240, 242);"><span onclick="copy(this)">#E8F0F2</span></div>
+        <div class="place c2" style="background-color: rgb(162, 219, 250);"><span onclick="copy(this)">#A2DBFA</span></div>
+        <div class="place c1" style="background-color: rgb(57, 162, 219);"><span onclick="copy(this)">#39A2DB</span></div>
+        <div class="place c0" style="background-color: rgb(5, 55, 66);"><span onclick="copy(this)">#053742</span></div>
+        </div>
+        </div>
+        <div class="item" id="a52">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(92, 51, 246);"><span onclick="copy(this)">#5C33F6</span></div>
+        <div class="place c2" style="background-color: rgb(162, 57, 234);"><span onclick="copy(this)">#A239EA</span></div>
+        <div class="place c1" style="background-color: rgb(255, 148, 204);"><span onclick="copy(this)">#FF94CC</span></div>
+        <div class="place c0" style="background-color: rgb(240, 217, 231);"><span onclick="copy(this)">#F0D9E7</span></div>
+        </div>
+        </div>
+        <div class="item" id="a53">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(237, 237, 237);"><span onclick="copy(this)">#EDEDED</span></div>
+        <div class="place c2" style="background-color: rgb(218, 0, 55);"><span onclick="copy(this)">#DA0037</span></div>
+        <div class="place c1" style="background-color: rgb(68, 68, 68);"><span onclick="copy(this)">#444444</span></div>
+        <div class="place c0" style="background-color: rgb(23, 23, 23);"><span onclick="copy(this)">#171717</span></div>
+        </div>
+        </div>
+        <div class="item" id="a54">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(102, 222, 147);"><span onclick="copy(this)">#66DE93</span></div>
+        <div class="place c2" style="background-color: rgb(255, 234, 201);"><span onclick="copy(this)">#FFEAC9</span></div>
+        <div class="place c1" style="background-color: rgb(255, 97, 109);"><span onclick="copy(this)">#FF616D</span></div>
+        <div class="place c0" style="background-color: rgb(216, 58, 86);"><span onclick="copy(this)">#D83A56</span></div>
+        </div>
+        </div>
+        <div class="item" id="a55">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(196, 144, 228);"><span onclick="copy(this)">#C490E4</span></div>
+        <div class="place c2" style="background-color: rgb(246, 198, 234);"><span onclick="copy(this)">#F6C6EA</span></div>
+        <div class="place c1" style="background-color: rgb(249, 249, 249);"><span onclick="copy(this)">#F9F9F9</span></div>
+        <div class="place c0" style="background-color: rgb(205, 240, 234);"><span onclick="copy(this)">#CDF0EA</span></div>
+        </div>
+        </div>
+        <div class="item" id="a56">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(242, 237, 215);"><span onclick="copy(this)">#F2EDD7</span></div>
+        <div class="place c2" style="background-color: rgb(160, 147, 125);"><span onclick="copy(this)">#A0937D</span></div>
+        <div class="place c1" style="background-color: rgb(58, 99, 81);"><span onclick="copy(this)">#3A6351</span></div>
+        <div class="place c0" style="background-color: rgb(95, 147, 154);"><span onclick="copy(this)">#5F939A</span></div>
+        </div>
+        </div>
+        <div class="item" id="a57">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(234, 226, 182);"><span onclick="copy(this)">#EAE2B6</span></div>
+        <div class="place c2" style="background-color: rgb(127, 139, 82);"><span onclick="copy(this)">#7F8B52</span></div>
+        <div class="place c1" style="background-color: rgb(163, 168, 71);"><span onclick="copy(this)">#A3A847</span></div>
+        <div class="place c0" style="background-color: rgb(85, 135, 118);"><span onclick="copy(this)">#558776</span></div>
+        </div>
+        </div>
+        <div class="item" id="a58">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(179, 226, 131);"><span onclick="copy(this)">#B3E283</span></div>
+        <div class="place c2" style="background-color: rgb(232, 228, 110);"><span onclick="copy(this)">#E8E46E</span></div>
+        <div class="place c1" style="background-color: rgb(243, 197, 131);"><span onclick="copy(this)">#F3C583</span></div>
+        <div class="place c0" style="background-color: rgb(233, 148, 151);"><span onclick="copy(this)">#E99497</span></div>
+        </div>
+        </div>
+        <div class="item" id="a59">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(1, 147, 124);"><span onclick="copy(this)">#01937C</span></div>
+        <div class="place c2" style="background-color: rgb(182, 200, 103);"><span onclick="copy(this)">#B6C867</span></div>
+        <div class="place c1" style="background-color: rgb(255, 192, 116);"><span onclick="copy(this)">#FFC074</span></div>
+        <div class="place c0" style="background-color: rgb(250, 241, 230);"><span onclick="copy(this)">#FAF1E6</span></div>
+        </div>
+        </div>
+        <div class="item" id="a60">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(240, 235, 204);"><span onclick="copy(this)">#F0EBCC</span></div>
+        <div class="place c2" style="background-color: rgb(62, 219, 240);"><span onclick="copy(this)">#3EDBF0</span></div>
+        <div class="place c1" style="background-color: rgb(119, 172, 241);"><span onclick="copy(this)">#77ACF1</span></div>
+        <div class="place c0" style="background-color: rgb(4, 0, 154);"><span onclick="copy(this)">#04009A</span></div>
+        </div>
+        </div>
+        <div class="item" id="a61">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(225, 232, 235);"><span onclick="copy(this)">#E1E8EB</span></div>
+        <div class="place c2" style="background-color: rgb(255, 193, 7);"><span onclick="copy(this)">#FFC107</span></div>
+        <div class="place c1" style="background-color: rgb(121, 82, 179);"><span onclick="copy(this)">#7952B3</span></div>
+        <div class="place c0" style="background-color: rgb(52, 58, 64);"><span onclick="copy(this)">#343A40</span></div>
+        </div>
+        </div>
+        <div class="item" id="a62">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(252, 222, 192);"><span onclick="copy(this)">#FCDEC0</span></div>
+        <div class="place c2" style="background-color: rgb(229, 178, 153);"><span onclick="copy(this)">#E5B299</span></div>
+        <div class="place c1" style="background-color: rgb(180, 132, 108);"><span onclick="copy(this)">#B4846C</span></div>
+        <div class="place c0" style="background-color: rgb(125, 90, 80);"><span onclick="copy(this)">#7D5A50</span></div>
+        </div>
+        </div>
+        <div class="item" id="a63">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(245, 169, 98);"><span onclick="copy(this)">#F5A962</span></div>
+        <div class="place c2" style="background-color: rgb(60, 141, 173);"><span onclick="copy(this)">#3C8DAD</span></div>
+        <div class="place c1" style="background-color: rgb(18, 93, 152);"><span onclick="copy(this)">#125D98</span></div>
+        <div class="place c0" style="background-color: rgb(221, 221, 221);"><span onclick="copy(this)">#DDDDDD</span></div>
+        </div>
+        </div>
+        <div class="item" id="a64">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(10, 29, 55);"><span onclick="copy(this)">#0A1D37</span></div>
+        <div class="place c2" style="background-color: rgb(255, 189, 155);"><span onclick="copy(this)">#FFBD9B</span></div>
+        <div class="place c1" style="background-color: rgb(255, 216, 204);"><span onclick="copy(this)">#FFD8CC</span></div>
+        <div class="place c0" style="background-color: rgb(255, 238, 219);"><span onclick="copy(this)">#FFEEDB</span></div>
+        </div>
+        </div>
+        <div class="item" id="a65">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(236, 219, 186);"><span onclick="copy(this)">#ECDBBA</span></div>
+        <div class="place c2" style="background-color: rgb(200, 75, 49);"><span onclick="copy(this)">#C84B31</span></div>
+        <div class="place c1" style="background-color: rgb(52, 103, 81);"><span onclick="copy(this)">#346751</span></div>
+        <div class="place c0" style="background-color: rgb(22, 22, 22);"><span onclick="copy(this)">#161616</span></div>
+        </div>
+        </div>
+        <div class="item" id="a66">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(94, 69, 75);"><span onclick="copy(this)">#5E454B</span></div>
+        <div class="place c2" style="background-color: rgb(216, 179, 132);"><span onclick="copy(this)">#D8B384</span></div>
+        <div class="place c1" style="background-color: rgb(243, 240, 215);"><span onclick="copy(this)">#F3F0D7</span></div>
+        <div class="place c0" style="background-color: rgb(206, 229, 208);"><span onclick="copy(this)">#CEE5D0</span></div>
+        </div>
+        </div>
+        <div class="item" id="a67">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(178, 171, 140);"><span onclick="copy(this)">#B2AB8C</span></div>
+        <div class="place c2" style="background-color: rgb(219, 230, 253);"><span onclick="copy(this)">#DBE6FD</span></div>
+        <div class="place c1" style="background-color: rgb(71, 89, 126);"><span onclick="copy(this)">#47597E</span></div>
+        <div class="place c0" style="background-color: rgb(41, 59, 95);"><span onclick="copy(this)">#293B5F</span></div>
+        </div>
+        </div>
+        <div class="item" id="a68">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(223, 238, 234);"><span onclick="copy(this)">#DFEEEA</span></div>
+        <div class="place c2" style="background-color: rgb(167, 196, 188);"><span onclick="copy(this)">#A7C4BC</span></div>
+        <div class="place c1" style="background-color: rgb(94, 139, 126);"><span onclick="copy(this)">#5E8B7E</span></div>
+        <div class="place c0" style="background-color: rgb(47, 93, 98);"><span onclick="copy(this)">#2F5D62</span></div>
+        </div>
+        </div>
+        <div class="item" id="a69">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(229, 213, 73);"><span onclick="copy(this)">#E5D549</span></div>
+        <div class="place c2" style="background-color: rgb(23, 104, 172);"><span onclick="copy(this)">#1768AC</span></div>
+        <div class="place c1" style="background-color: rgb(37, 65, 178);"><span onclick="copy(this)">#2541B2</span></div>
+        <div class="place c0" style="background-color: rgb(3, 37, 108);"><span onclick="copy(this)">#03256C</span></div>
+        </div>
+        </div>
+        <div class="item" id="a70">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(178, 184, 163);"><span onclick="copy(this)">#B2B8A3</span></div>
+        <div class="place c2" style="background-color: rgb(244, 199, 171);"><span onclick="copy(this)">#F4C7AB</span></div>
+        <div class="place c1" style="background-color: rgb(222, 237, 240);"><span onclick="copy(this)">#DEEDF0</span></div>
+        <div class="place c0" style="background-color: rgb(255, 245, 235);"><span onclick="copy(this)">#FFF5EB</span></div>
+        </div>
+        </div>
+        <div class="item" id="a71">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(191, 19, 99);"><span onclick="copy(this)">#BF1363</span></div>
+        <div class="place c2" style="background-color: rgb(222, 238, 234);"><span onclick="copy(this)">#DEEEEA</span></div>
+        <div class="place c1" style="background-color: rgb(57, 166, 163);"><span onclick="copy(this)">#39A6A3</span></div>
+        <div class="place c0" style="background-color: rgb(35, 30, 35);"><span onclick="copy(this)">#231E23</span></div>
+        </div>
+        </div>
+        <div class="item" id="a72">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(255, 237, 163);"><span onclick="copy(this)">#FFEDA3</span></div>
+        <div class="place c2" style="background-color: rgb(57, 169, 203);"><span onclick="copy(this)">#39A9CB</span></div>
+        <div class="place c1" style="background-color: rgb(41, 64, 211);"><span onclick="copy(this)">#2940D3</span></div>
+        <div class="place c0" style="background-color: rgb(35, 35, 35);"><span onclick="copy(this)">#232323</span></div>
+        </div>
+        </div>
+        <div class="item" id="a73">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(59, 20, 167);"><span onclick="copy(this)">#3B14A7</span></div>
+        <div class="place c2" style="background-color: rgb(172, 102, 204);"><span onclick="copy(this)">#AC66CC</span></div>
+        <div class="place c1" style="background-color: rgb(246, 184, 184);"><span onclick="copy(this)">#F6B8B8</span></div>
+        <div class="place c0" style="background-color: rgb(255, 237, 153);"><span onclick="copy(this)">#FFED99</span></div>
+        </div>
+        <div class="item" id="a74">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(52, 63, 86);"><span onclick="copy(this)">#343F56</span></div>
+        <div class="place c2" style="background-color: rgb(245, 71, 72);"><span onclick="copy(this)">#F54748</span></div>
+        <div class="place c1" style="background-color: rgb(251, 147, 0);"><span onclick="copy(this)">#FB9300</span></div>
+        <div class="place c0" style="background-color: rgb(245, 230, 202);"><span onclick="copy(this)">#F5E6CA</span></div>
+        </div>
+        </div>
+        <div class="item" id="a75">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(2, 46, 87);"><span onclick="copy(this)">#022E57</span></div>
+        <div class="place c2" style="background-color: rgb(0, 90, 141);"><span onclick="copy(this)">#005A8D</span></div>
+        <div class="place c1" style="background-color: rgb(255, 150, 173);"><span onclick="copy(this)">#FF96AD</span></div>
+        <div class="place c0" style="background-color: rgb(255, 245, 253);"><span onclick="copy(this)">#FFF5FD</span></div>
+        </div>
+        </div>
+        <div class="item" id="a76">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(0, 0, 0);"><span onclick="copy(this)">#000000</span></div>
+        <div class="place c2" style="background-color: rgb(12, 66, 113);"><span onclick="copy(this)">#0C4271</span></div>
+        <div class="place c1" style="background-color: rgb(10, 129, 171);"><span onclick="copy(this)">#0A81AB</span></div>
+        <div class="place c0" style="background-color: rgb(249, 223, 220);"><span onclick="copy(this)">#F9DFDC</span></div>
+        </div>
+        </div>
+        <div class="item" id="a77">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(0, 95, 153);"><span onclick="copy(this)">#005F99</span></div>
+        <div class="place c2" style="background-color: rgb(255, 68, 159);"><span onclick="copy(this)">#FF449F</span></div>
+        <div class="place c1" style="background-color: rgb(255, 245, 183);"><span onclick="copy(this)">#FFF5B7</span></div>
+        <div class="place c0" style="background-color: rgb(0, 234, 211);"><span onclick="copy(this)">#00EAD3</span></div>
+        </div>
+        </div>
+        <div class="item" id="a78">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(213, 219, 179);"><span onclick="copy(this)">#D5DBB3</span></div>
+        <div class="place c2" style="background-color: rgb(255, 248, 217);"><span onclick="copy(this)">#FFF8D9</span></div>
+        <div class="place c1" style="background-color: rgb(187, 55, 26);"><span onclick="copy(this)">#BB371A</span></div>
+        <div class="place c0" style="background-color: rgb(235, 168, 58);"><span onclick="copy(this)">#EBA83A</span></div>
+        </div>
+        </div>
+        <div class="item" id="a79">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(228, 186, 212);"><span onclick="copy(this)">#E4BAD4</span></div>
+        <div class="place c2" style="background-color: rgb(246, 223, 235);"><span onclick="copy(this)">#F6DFEB</span></div>
+        <div class="place c1" style="background-color: rgb(248, 237, 237);"><span onclick="copy(this)">#F8EDED</span></div>
+        <div class="place c0" style="background-color: rgb(202, 247, 227);"><span onclick="copy(this)">#CAF7E3</span></div>
+        </div>
+        </div>
+        <div class="item" id="a80">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(246, 229, 233);"><span onclick="copy(this)">#F6E5E9</span></div>
+        <div class="place c2" style="background-color: rgb(231, 152, 174);"><span onclick="copy(this)">#E798AE</span></div>
+        <div class="place c1" style="background-color: rgb(150, 45, 45);"><span onclick="copy(this)">#962D2D</span></div>
+        <div class="place c0" style="background-color: rgb(74, 28, 64);"><span onclick="copy(this)">#4A1C40</span></div>
+        </div>
+        </div>
+        <div class="item" id="a81">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(254, 221, 190);"><span onclick="copy(this)">#FEDDBE</span></div>
+        <div class="place c2" style="background-color: rgb(255, 201, 71);"><span onclick="copy(this)">#FFC947</span></div>
+        <div class="place c1" style="background-color: rgb(24, 90, 219);"><span onclick="copy(this)">#185ADB</span></div>
+        <div class="place c0" style="background-color: rgb(10, 25, 49);"><span onclick="copy(this)">#0A1931</span></div>
+        </div>
+        </div>
+        <div class="item" id="a82">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(255, 187, 204);"><span onclick="copy(this)">#FFBBCC</span></div>
+        <div class="place c2" style="background-color: rgb(255, 221, 204);"><span onclick="copy(this)">#FFDDCC</span></div>
+        <div class="place c1" style="background-color: rgb(255, 201, 60);"><span onclick="copy(this)">#FFC93C</span></div>
+        <div class="place c0" style="background-color: rgb(153, 21, 78);"><span onclick="copy(this)">#99154E</span></div>
+        </div>
+        </div>
+        <div class="item" id="a83">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(0, 0, 0);"><span onclick="copy(this)">#000000</span></div>
+        <div class="place c2" style="background-color: rgb(217, 152, 121);"><span onclick="copy(this)">#D99879</span></div>
+        <div class="place c1" style="background-color: rgb(244, 204, 164);"><span onclick="copy(this)">#F4CCA4</span></div>
+        <div class="place c0" style="background-color: rgb(186, 19, 93);"><span onclick="copy(this)">#BA135D</span></div>
+        </div>
+        </div>
+        <div class="item" id="a84">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(182, 201, 240);"><span onclick="copy(this)">#B6C9F0</span></div>
+        <div class="place c2" style="background-color: rgb(255, 229, 226);"><span onclick="copy(this)">#FFE5E2</span></div>
+        <div class="place c1" style="background-color: rgb(245, 171, 201);"><span onclick="copy(this)">#F5ABC9</span></div>
+        <div class="place c0" style="background-color: rgb(233, 59, 129);"><span onclick="copy(this)">#E93B81</span></div>
+        </div>
+        </div>
+        <div class="item" id="a85">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(242, 244, 195);"><span onclick="copy(this)">#F2F4C3</span></div>
+        <div class="place c2" style="background-color: rgb(252, 146, 227);"><span onclick="copy(this)">#FC92E3</span></div>
+        <div class="place c1" style="background-color: rgb(0, 87, 146);"><span onclick="copy(this)">#005792</span></div>
+        <div class="place c0" style="background-color: rgb(72, 0, 50);"><span onclick="copy(this)">#480032</span></div>
+        </div>
+        </div>
+        <div class="item" id="a86">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(196, 73, 194);"><span onclick="copy(this)">#C449C2</span></div>
+        <div class="place c2" style="background-color: rgb(255, 206, 173);"><span onclick="copy(this)">#FFCEAD</span></div>
+        <div class="place c1" style="background-color: rgb(255, 245, 171);"><span onclick="copy(this)">#FFF5AB</span></div>
+        <div class="place c0" style="background-color: rgb(134, 122, 233);"><span onclick="copy(this)">#867AE9</span></div>
+        </div>
+        </div>
+        <div class="item" id="a87">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(6, 68, 32);"><span onclick="copy(this)">#064420</span></div>
+        <div class="place c2" style="background-color: rgb(228, 239, 231);"><span onclick="copy(this)">#E4EFE7</span></div>
+        <div class="place c1" style="background-color: rgb(253, 250, 246);"><span onclick="copy(this)">#FDFAF6</span></div>
+        <div class="place c0" style="background-color: rgb(250, 241, 230);"><span onclick="copy(this)">#FAF1E6</span></div>
+        </div>
+        </div>
+        <div class="item" id="a88">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(252, 84, 4);"><span onclick="copy(this)">#FC5404</span></div>
+        <div class="place c2" style="background-color: rgb(249, 132, 4);"><span onclick="copy(this)">#F98404</span></div>
+        <div class="place c1" style="background-color: rgb(249, 178, 8);"><span onclick="copy(this)">#F9B208</span></div>
+        <div class="place c0" style="background-color: rgb(247, 253, 4);"><span onclick="copy(this)">#F7FD04</span></div>
+        </div>
+        </div>
+        <div class="item" id="a89">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(175, 185, 200);"><span onclick="copy(this)">#AFB9C8</span></div>
+        <div class="place c2" style="background-color: rgb(206, 151, 176);"><span onclick="copy(this)">#CE97B0</span></div>
+        <div class="place c1" style="background-color: rgb(244, 169, 168);"><span onclick="copy(this)">#F4A9A8</span></div>
+        <div class="place c0" style="background-color: rgb(251, 198, 164);"><span onclick="copy(this)">#FBC6A4</span></div>
+        </div>
+        </div>
+        <div class="item" id="a90">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(255, 255, 199);"><span onclick="copy(this)">#FFFFC7</span></div>
+        <div class="place c2" style="background-color: rgb(169, 241, 223);"><span onclick="copy(this)">#A9F1DF</span></div>
+        <div class="place c1" style="background-color: rgb(30, 174, 152);"><span onclick="copy(this)">#1EAE98</span></div>
+        <div class="place c0" style="background-color: rgb(35, 62, 139);"><span onclick="copy(this)">#233E8B</span></div>
+        </div>
+        </div>
+        <div class="item" id="a91">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(209, 217, 217);"><span onclick="copy(this)">#D1D9D9</span></div>
+        <div class="place c2" style="background-color: rgb(242, 145, 145);"><span onclick="copy(this)">#F29191</span></div>
+        <div class="place c1" style="background-color: rgb(238, 196, 196);"><span onclick="copy(this)">#EEC4C4</span></div>
+        <div class="place c0" style="background-color: rgb(148, 208, 204);"><span onclick="copy(this)">#94D0CC</span></div>
+        </div>
+        </div>
+        <div class="item" id="a92">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(200, 194, 188);"><span onclick="copy(this)">#C8C2BC</span></div>
+        <div class="place c2" style="background-color: rgb(242, 218, 195);"><span onclick="copy(this)">#F2DAC3</span></div>
+        <div class="place c1" style="background-color: rgb(241, 202, 137);"><span onclick="copy(this)">#F1CA89</span></div>
+        <div class="place c0" style="background-color: rgb(204, 155, 109);"><span onclick="copy(this)">#CC9B6D</span></div>
+        </div>
+        </div>
+        <div class="item" id="a93">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(165, 225, 173);"><span onclick="copy(this)">#A5E1AD</span></div>
+        <div class="place c2" style="background-color: rgb(76, 161, 163);"><span onclick="copy(this)">#4CA1A3</span></div>
+        <div class="place c1" style="background-color: rgb(81, 18, 129);"><span onclick="copy(this)">#511281</span></div>
+        <div class="place c0" style="background-color: rgb(33, 9, 78);"><span onclick="copy(this)">#21094E</span></div>
+        </div>
+        </div>
+        <div class="item" id="a94">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(86, 74, 74);"><span onclick="copy(this)">#564A4A</span></div>
+        <div class="place c2" style="background-color: rgb(74, 169, 108);"><span onclick="copy(this)">#4AA96C</span></div>
+        <div class="place c1" style="background-color: rgb(159, 230, 160);"><span onclick="copy(this)">#9FE6A0</span></div>
+        <div class="place c0" style="background-color: rgb(245, 92, 71);"><span onclick="copy(this)">#F55C47</span></div>
+        </div>
+        </div>
+        <div class="item" id="a95">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(237, 237, 208);"><span onclick="copy(this)">#EDEDD0</span></div>
+        <div class="place c2" style="background-color: rgb(166, 214, 214);"><span onclick="copy(this)">#A6D6D6</span></div>
+        <div class="place c1" style="background-color: rgb(165, 143, 170);"><span onclick="copy(this)">#A58FAA</span></div>
+        <div class="place c0" style="background-color: rgb(144, 127, 164);"><span onclick="copy(this)">#907FA4</span></div>
+        </div>
+        </div>
+        <div class="item" id="a96">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(218, 127, 143);"><span onclick="copy(this)">#DA7F8F</span></div>
+        <div class="place c2" style="background-color: rgb(167, 187, 199);"><span onclick="copy(this)">#A7BBC7</span></div>
+        <div class="place c1" style="background-color: rgb(225, 229, 234);"><span onclick="copy(this)">#E1E5EA</span></div>
+        <div class="place c0" style="background-color: rgb(250, 243, 243);"><span onclick="copy(this)">#FAF3F3</span></div>
+        </div>
+        </div>
+        <div class="item" id="a97">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(226, 143, 131);"><span onclick="copy(this)">#E28F83</span></div>
+        <div class="place c2" style="background-color: rgb(74, 80, 61);"><span onclick="copy(this)">#4A503D</span></div>
+        <div class="place c1" style="background-color: rgb(142, 151, 117);"><span onclick="copy(this)">#8E9775</span></div>
+        <div class="place c0" style="background-color: rgb(250, 242, 218);"><span onclick="copy(this)">#FAF2DA</span></div>
+        </div>
+        </div>
+        <div class="item" id="a98">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(51, 68, 67);"><span onclick="copy(this)">#334443</span></div>
+        <div class="place c2" style="background-color: rgb(52, 101, 109);"><span onclick="copy(this)">#34656D</span></div>
+        <div class="place c1" style="background-color: rgb(198, 255, 193);"><span onclick="copy(this)">#C6FFC1</span></div>
+        <div class="place c0" style="background-color: rgb(255, 251, 223);"><span onclick="copy(this)">#FFFBDF</span></div>
+        </div>
+        </div>
+        <div class="item" id="a99">
+        <div class="palette">
+        <div class="place c3" style="background-color: rgb(170, 170, 170);"><span onclick="copy(this)">#AAAAAA</span></div>
+        <div class="place c2" style="background-color: rgb(246, 220, 191);"><span onclick="copy(this)">#F6DCBF</span></div>
+        <div class="place c1" style="background-color: rgb(247, 164, 64);"><span onclick="copy(this)">#F7A440</span></div>
+        <div class="place c0" style="background-color: rgb(225, 112, 26);"><span onclick="copy(this)">#E1701A</span></div>
+        </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

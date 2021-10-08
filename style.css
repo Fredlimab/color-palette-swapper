@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Cairo', sans-serif;
+}
+
+.header {
+    flex: 100%;
+    height: 11vh;
+    text-align: center;
+
+}
+
+.sidebar {
+    flex: 10%;
+    text-align: center;
+}
+
+.main {
+    flex: 90%;
+    height: 75vh;
+    text-align: center;
+
+}
+
+.footer {
+    flex: 100%;
+    height: 11vh;
+    text-align: center;
+}
+
+.button {
+    width: 7em;
+    height: 3em;
+}
+
+.feed-global{
+    display: none;
+}
+
