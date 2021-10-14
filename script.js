@@ -36,3 +36,34 @@ function mudarPaleta(){
 });
 
 //criar uma function para rotacionar as cores entre as áreas
+document.getElementById("rotate").addEventListener("click",
+
+function rodarCores(){
+    
+    //armazenar estilos
+    const mainBack = document.getElementById("footer").style.backgroundColor;
+    const headBack = document.getElementById("main").style.backgroundColor
+    const sideBack = document.getElementById("header").style.backgroundColor
+    const footBack = document.getElementById("sidebar").style.backgroundColor
+
+    //armazenar textos
+    const mainText = document.getElementById("foot-text").innerText;
+    const headText = document.getElementById("main-text").innerText;
+    const sideText = document.getElementById("head-text").innerText;
+    const footText = document.getElementById("side-text").innerText;
+
+    //efetuar troca de textos
+    document.getElementById("main-text").innerText = mainText;
+    document.getElementById("head-text").innerText = headText;
+    document.getElementById("side-text").innerText = sideText;
+    document.getElementById("foot-text").innerText = footText;
+
+    //efetuar troca do background
+    document.getElementById("main").style.backgroundColor = mainBack;
+    document.getElementById("header").style.backgroundColor =headBack;
+    document.getElementById("sidebar").style.backgroundColor = sideBack;
+    document.getElementById("footer").style.backgroundColor = footBack;
+
+   // console.log(mainBack);
+
+});
